@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad</title>
+    <style>
+        body,
+        h1,
+        h2,
+        p,
+        figure,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos generales */
+        body {
+            padding-top: 12px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0 auto;
+            /* Para centrar todo el contenido */
+            max-width: 800px;
+            /* Establecer un ancho máximo */
+        }
+
+        /* Barra de navegación */
+        nav {
+            background-color: #ffa178;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            display: flex;
+            /* Añadido para alinear elementos en la misma línea */
+            justify-content: space-between;
+            /* Espacio entre los elementos */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            /* Añadido para alinear elementos en la misma línea */
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #000000;
+            text-decoration: none;
+            padding: 5px 10px; /* Añadido para mejorar el área de clic */
+        }
+
+        /* Formulario de búsqueda dentro de la barra de navegación */
+        nav form {
+            display: flex;
+            /* Añadido para alinear elementos en la misma línea */
+            align-items: center;
+            /* Centra verticalmente */
+        }
+
+        nav label {
+            color: #ffffff;
+            margin-right: 5px;
+        }
+
+        /* Estilo para el campo de búsqueda */
+        nav input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+        }
+
+        /* Estilo para el botón de búsqueda */
+        nav button[type="submit"] {
+            background-color: #ffffff;
+            color: #ffa178;
+            border: none;
+            padding: 5px 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Título del artículo */
+        h1 {
+            color: #01103f;
+            font-size: 24px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        /* Párrafos del artículo */
+        p {
+            text-align: justify;
+            line-height: 1.5;
+        }
+
+        /* Imágenes */
+        figure {
+            width: 400px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            box-shadow: 0 0 2px 1px rgba(255, 145, 71, 0.5);
+        }
+
+
+        footer {
+            width: 100%;
+            background-color: #ffa178;
+        }
+
+        footer p {
+            text-align: center;
+            padding: 10px;
+            color: #000000;
+        }
+
+        /* Contenido principal */
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        h2 {
+            color: #4c4cd6;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav> <!-- Barra de navegación -->
+        <ul>
+            <li><a href="#" tabindex="0">Inicio</a></li>
+            <li><a href="#" tabindex="0">Características</a></li>
+            <li><a href="#" tabindex="0">Precios</a></li>
+            <li><a href="#" tabindex="0">Acerca de nosotros</a></li>
+            <li><a href="#" tabindex="0">Contáctanos</a></li>
+        </ul>
+
+        <form action="#" method="get"> <!-- Formulario de búsqueda dentro de la barra de navegación -->
+            <input type="text" id="search" name="search" placeholder="Buscar">
+            <button type="submit">🔍</button>
+        </form>
+    </nav>
+
+    <article> <!-- Contenido principal -->
+        <h1>Título del artículo</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. ...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. ...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. ...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. ...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. ...
+        </p>
+        <figure>
+            <img src="../UF3/imagen.webp" alt="imagen1">
+        </figure>
+
+        <h2>Subtítulo del artículo #2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. ...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. ...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. ...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. ...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. ...
+        </p>
+        <figure>
+            <img src="../UF3/imagen.webp" alt="imagen2">
+        </figure>
+    </article>
+
+    <footer> <!-- Pie de página -->
+        <p>Derechos de autor © 2024. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
