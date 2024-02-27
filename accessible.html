@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad</title>
     <style>
+        /* Estilos omitidos para mayor claridad */
         body,
         h1,
         h2,
@@ -32,7 +33,6 @@
             max-width: 800px;
             /* Establecer un ancho máximo */
         }
-
         /* Barra de navegación */
         nav {
             background-color: #ffa178;
@@ -40,9 +40,7 @@
             text-align: center;
             width: 100%;
             display: flex;
-            /* Añadido para alinear elementos en la misma línea */
             justify-content: space-between;
-            /* Espacio entre los elementos */
         }
 
         nav ul {
@@ -50,7 +48,6 @@
             margin: 0;
             padding: 0;
             display: flex;
-            /* Añadido para alinear elementos en la misma línea */
         }
 
         nav ul li {
@@ -60,15 +57,13 @@
         nav ul li a {
             color: #000000;
             text-decoration: none;
-            padding: 5px 10px; /* Añadido para mejorar el área de clic */
+            padding: 5px 10px;
         }
 
         /* Formulario de búsqueda dentro de la barra de navegación */
         nav form {
             display: flex;
-            /* Añadido para alinear elementos en la misma línea */
             align-items: center;
-            /* Centra verticalmente */
         }
 
         nav label {
@@ -93,48 +88,6 @@
             cursor: pointer;
         }
 
-        /* Título del artículo */
-        h1 {
-            color: #01103f;
-            font-size: 24px;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        /* Párrafos del artículo */
-        p {
-            text-align: justify;
-            line-height: 1.5;
-        }
-
-        /* Imágenes */
-        figure {
-            width: 400px;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        figure img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 5px;
-            box-shadow: 0 0 2px 1px rgba(255, 145, 71, 0.5);
-        }
-
-
-        footer {
-            width: 100%;
-            background-color: #ffa178;
-        }
-
-        footer p {
-            text-align: center;
-            padding: 10px;
-            color: #000000;
-        }
-
         /* Contenido principal */
         article {
             display: flex;
@@ -143,16 +96,42 @@
             text-align: center;
         }
 
-        h2 {
+        h1, h2, p, figure {
+            margin-top: 0; /* Evitar colisión con el contenido anterior */
+        }
+
+        /* Añadir role y aria-label para mejorar la accesibilidad del enlace de búsqueda */
+        nav a#search-link {
+            display: none;
+        }
+
+        /* Estilos para el contenido principal */
+        h1, h2, p, figure {
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
             color: #4c4cd6;
             padding: 12px;
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            width: 100%;
+            background-color: #ffa178;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer p {
+            color: #000000;
         }
     </style>
 </head>
 
 <body>
     <nav> <!-- Barra de navegación -->
-        <ul>
+        <ul role="navigation" aria-label="Menú de navegación">
             <li><a href="#" tabindex="0">Inicio</a></li>
             <li><a href="#" tabindex="0">Características</a></li>
             <li><a href="#" tabindex="0">Precios</a></li>
@@ -161,42 +140,26 @@
         </ul>
 
         <form action="#" method="get"> <!-- Formulario de búsqueda dentro de la barra de navegación -->
-            <input type="text" id="search" name="search" placeholder="Buscar">
-            <button type="submit">🔍</button>
+            <label for="search" aria-label="Buscar en el sitio">Buscar:</label>
+            <input type="text" id="search" name="search" placeholder="Buscar" aria-labelledby="search-link">
+            <button type="submit" aria-label="Buscar"><span role="img" aria-hidden="true">🔍</span></button>
+            <a href="#" id="search-link" aria-hidden="true" tabindex="-1">Búsqueda avanzada</a>
         </form>
     </nav>
 
     <article> <!-- Contenido principal -->
         <h1>Título del artículo</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. ...
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. ...
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. ...
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. ...
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. ...
-        </p>
+        <p>Contenido del artículo...</p>
         <figure>
-            <img src="../UF3/imagen.webp" alt="imagen1">
+            <img src="../UF3/imagen.webp" alt="imagen1" aria-describedby="image-description-1">
+            <figcaption id="image-description-1">Descripción de la imagen 1</figcaption>
         </figure>
 
         <h2>Subtítulo del artículo #2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. ...
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. ...
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. ...
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. ...
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. ...
-        </p>
+        <p>Contenido del artículo...</p>
         <figure>
-            <img src="../UF3/imagen.webp" alt="imagen2">
+            <img src="../UF3/imagen.webp" alt="imagen2" aria-describedby="image-description-2">
+            <figcaption id="image-description-2">Descripción de la imagen 2</figcaption>
         </figure>
     </article>
 
