@@ -4,192 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='main.css'>
     <title>Actividad</title>
-    <style>
-        /* Estilos omitidos para mayor claridad */
-        body,
-        h1,
-        h2,
-        p,
-        figure,
-        ul,
-        li {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        /* Barra de navegación */
-        nav {
-            background-color: #ffa178;
-            padding: 10px;
-            text-align: center;
-            width: 100%;
-            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: #000000;
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            background-color: #ffcc99;
-        }
-
-        nav form {
-            display: flex;
-            align-items: center;
-        }
-
-        nav label {
-            color: #000000;
-            margin-right: 5px;
-        }
-
-        nav input[type="text"] {
-            padding: 8px;
-            border: 1px solid #000000;
-            border-radius: 5px;
-        }
-
-        nav button[type="submit"] {
-            background-color: #000000;
-            color: #ffa178;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        nav button[type="submit"]:hover {
-            background-color: #464646;
-        }
-
-        nav a#search-link {
-            display: none;
-        }
-
-        article {
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        h1,
-        h2,
-        p,
-        figure {
-            margin-top: 0;
-        }
-
-        h1,
-        h2,
-        p,
-        figure {
-            margin-bottom: 20px;
-        }
-
-        img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-        }
-
-        h1,
-        h2 {
-            color: #4c4cd6;
-            padding: 12px;
-        }
-
-        footer {
-            width: 100%;
-            background-color: #ffa178;
-            padding: 10px;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        footer p {
-            color: #000000;
-        }
-    </style>
 </head>
 
 <body>
     <nav aria-label="Menú de navegación">
-    <ul>
-        <li><a href="#" tabindex="0">Inicio</a></li>
-        <li><a href="#" tabindex="0">Características</a></li>
-        <li><a href="#" tabindex="0">Precios</a></li>
-        <li><a href="#" tabindex="0">Acerca de nosotros</a></li>
-        <li><a href="#" tabindex="0">Contáctanos</a></li>
-    </ul> 
+        <ul>
+            <li><a href="#" tabindex="0">Inicio</a></li>
+            <li><a href="#" tabindex="0">Características</a></li>
+            <li><a href="#" tabindex="0">Precios</a></li>
+            <li><a href="#" tabindex="0">Acerca de nosotros</a></li>
+            <li><a href="#" tabindex="0">Contáctanos</a></li>
+        </ul>
         <form action="#" method="get">
             <label for="search" aria-label="Buscar en el sitio">Buscar:</label>
             <input type="text" id="search" name="search" placeholder="Buscar" aria-labelledby="search-link">
             <button type="submit" aria-label="Buscar"><span role="img" aria-hidden="true">🔍</span></button>
             <a href="#" id="search-link">Búsqueda avanzada</a>
         </form>
-        
     </nav>
+    <div>
+        <article>
+            <h1>Título del artículo</h1>
+            <p>
+            <p>A dialog is a window overlaid on either the primary window or another dialog window. Windows under
+                a modal
+                dialog are inert. That is, users cannot interact with content outside an active dialog window.
+                Inert content
+                outside an active dialog is typically visually obscured or dimmed so it is difficult to discern,
+                and in some
+                implementations, attempts to interact with the inert content cause the dialog to close.</p>
+            </p>
+            <figure>
+                <img src="/imagen.jpg" alt="imagen1" aria-describedby="image-description-1">
+                <figcaption id="image-description-1"></figcaption>
+            </figure>
 
-    <article>
-        <h1>Título del artículo</h1>
-        <p>
-        <p>A dialog is a window overlaid on either the primary window or another dialog window. Windows under a modal
-            dialog are inert. That is, users cannot interact with content outside an active dialog window. Inert content
-            outside an active dialog is typically visually obscured or dimmed so it is difficult to discern, and in some
-            implementations, attempts to interact with the inert content cause the dialog to close.</p>
-        </p>
-        <figure>
-            <img src="/imagen.jpg" alt="imagen1" aria-describedby="image-description-1">
-            <figcaption id="image-description-1"></figcaption>
-        </figure>
-
-        <h2>Subtítulo del artículo #2</h2>
-        <p>A dialog is a window overlaid on either the primary window or another dialog window. Windows under a modal
-            dialog are inert. That is, users cannot interact with content outside an active dialog window. Inert content
-            outside an active dialog is typically visually obscured or dimmed so it is difficult to discern, and in some
-            implementations, attempts to interact with the inert content cause the dialog to close.</p>
-        <figure>
-            <img src="/imagen.jpg" alt="imagen2" aria-describedby="image-description-2">
-            <figcaption id="image-description-2"></figcaption>
-        </figure>
-    </article>
+            <h2>Subtítulo del artículo #2</h2>
+            <p>A dialog is a window overlaid on either the primary window or another dialog window. Windows under a
+                modal
+                dialog are inert. That is, users cannot interact with content outside an active dialog window. Inert
+                content
+                outside an active dialog is typically visually obscured or dimmed so it is difficult to discern, and in
+                some
+                implementations, attempts to interact with the inert content cause the dialog to close.</p>
+            <figure>
+                <img src="/imagen.jpg" alt="imagen2" aria-describedby="image-description-2">
+                <figcaption id="image-description-2"></figcaption>
+            </figure>
+        </article>
+    </div>
 
     <footer>
         <p>Derechos de autor © 2024. Todos los derechos reservados.</p>
